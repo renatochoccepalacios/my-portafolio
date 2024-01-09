@@ -115,7 +115,7 @@ body {
     padding: 2rem;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 7rem);
+    /* height: calc(100vh - 7rem); */
 }
 
 .home-nombre {
@@ -327,6 +327,7 @@ body {
 
 }
 
+
 .sobre-mi-img {
     width: 100%;
 }
@@ -384,7 +385,10 @@ body {
     transition: .3s ease;
     cursor: pointer;
 }
-
+.card-item-skill svg {
+    width: 100px;
+    height: 100px;
+}
 .card-item-skill:hover {
     transform: scale(1.2);
 }
@@ -521,7 +525,7 @@ body {
     }
 
     .skills-tittle {
-        font-size: 1.7rem;
+        font-size: 2rem;
 
     }
 
@@ -547,7 +551,7 @@ body {
     }
 
     .inicio-row-left h1 {
-        font-size: 4.3vw;
+        font-size: 2rem;
     }
 
     .button-cv {
@@ -562,6 +566,7 @@ body {
 
     .contenedor-proyectos {
         height: auto;
+        gap: 70px;
         padding: 5rem 2rem 6rem 2rem;
     }
     .proyecto-item {
@@ -569,15 +574,7 @@ body {
     }
 }
 
-@media (max-width: 767px) {
-    .proyecto-footer {
-        flex-direction: column;
-    }
 
-    .button-link {
-        width: 100%;
-    }
-}
 
 .form-contenedor {
     display: flex;
@@ -589,8 +586,9 @@ body {
     height: 100vh;
 }
 
-.form-contenedor > h1 {
-    font-size: 58px;
+.contacto {
+    text-align: center;
+    font-size: 40px;
 }
 .form-contacto {
     display: flex;
@@ -614,7 +612,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 50%;
-    gap: 17px;
+    gap: 40px;
 
 }
 
@@ -627,7 +625,7 @@ body {
     gap: 17px;
 }
 
-.nombre-gmail-form input:nth-child(1), .nombre-gmail-form input:nth-child(2) {
+.nombre-gmail-form  input /* input:nth-child(1), .nombre-gmail-form input:nth-child(2) */ {
     width: 50%;
 }
 .redes-contenedor {
@@ -637,7 +635,20 @@ body {
     padding: 0.86rem 1rem;
     color: #fff;
     background: #1d009e;
-    
+    letter-spacing: 2px;
+    font-weight: 700;
+    transition: all .5s;
+}
+
+.redes-contenedor:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgb(65, 23, 255);
+
+}
+
+.redes-contenedor i, .redes-contenedor span {
+    font-size: 20px;
+
 }
 
 .form-contenido input,
@@ -659,6 +670,7 @@ body {
 
 .form-contenido textarea {
     height: 130px;
+    resize: none;
 
 }
 
@@ -671,4 +683,81 @@ body {
     padding: 0.86rem 1rem;
     font-family: 'urbanist';
 
+}
+
+@media (max-width: 767px) {
+    .proyecto-footer {
+        flex-direction: column;
+    }
+
+    .proyecto-contenido {
+        width: 100%;
+    }
+
+    .button-link {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .form-contacto {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        gap: 60px;
+    }
+
+    .form-contenedor{
+        height: auto;
+        padding: 5rem 2rem 6rem 2rem;
+    }
+    
+    .form-contenido {
+        gap: 10px;
+        padding: 2rem;
+    }
+
+    .form-redes {
+        padding: 2rem;
+    }
+
+    .form-contenido {
+        width: 100%;
+    }
+
+    .form-redes {
+        width: 100%;
+    }
+}
+
+@media (max-width: 887px) {
+    
+}
+
+@media (max-width: 450px) {
+    .form-title {
+        font-size: 23px;
+    }
+    .nombre-gmail-form {
+        flex-direction: column;
+    }
+    .nombre-gmail-form > input {
+        width: 100%;
+
+    }
+}
+
+@media (max-width: 370px) {
+    .form-contenido {
+        padding: 0;
+    }
+
+    .form-redes {
+        padding: 0;
+    }
+    
+    .proyecto-item {
+        padding: 0;
+    }
 }
