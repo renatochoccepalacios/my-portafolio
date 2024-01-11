@@ -115,7 +115,7 @@ body {
     padding: 2rem;
     align-items: center;
     width: 100%;
-    /* height: calc(100vh - 7rem); */
+    height: calc(100vh - 60px);
 }
 
 .home-nombre {
@@ -137,11 +137,10 @@ body {
 
 .button-cv {
     padding: 20px;
-    border: 1px solid;
+    border: 1px solid #4117ff;
     width: 200px;
     text-align: center;
     cursor: pointer;
-    border-color: #4117ff;
     letter-spacing: 2px;
 
     color: #e9e9e9;
@@ -371,6 +370,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 2rem;
 }
 
 .card-item-skill i {
@@ -430,15 +430,17 @@ body {
     text-align: center;
     width: 200px;
     height: 50px;
-    color: #fff;
-    border: 1px solid;
+    color: #e9e9e9;
+    font-weight: 900;
     padding: 10px;
     transition: 0.5s ease;
+    border: 1px solid #4117ff;
+
 }
 
 .button-link:hover {
-    color: #000;
-    background-color: #fff;
+    color: #000000;
+    background-color: #4117ff;
 }
 
 .proyecto-footer {
@@ -465,9 +467,15 @@ body {
     width: 100%;
     border: 5px solid #1d009e;
     position: relative;
+    overflow: hidden;
 }
 
-.contenedor-img-proyecto::after {
+.contenedor-img-proyecto img:hover {
+    transform: scale(1.2);
+}
+
+
+/* .contenedor-img-proyecto::after {
     content: "";
     position: absolute;
     top: 0;
@@ -475,13 +483,15 @@ body {
     width: 100%;
     height: 100%;
     background-color: #2323234d;
-}
+} */
 
 .img-proyecto {
     width: 100%;
+    cursor: pointer;
     height: 270px;
     object-fit: cover;
     object-position: top;
+    transition: 0.5s;
 }
 
 
