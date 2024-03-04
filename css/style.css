@@ -7,15 +7,24 @@
     list-style: none;
     text-decoration: none;
 }
-
+:root {
+    --color1: #373739;
+    --color2: #19191a;
+    --color3: #020202;
+    --color4: #f4f4f4;
+}
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'urbanist';
-    background: #0a0136;
+    /* background-image: url('https://images.unsplash.com/photo-1525352265139-caa4490ea6d0?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
     display: flex;
+    /* background-size: cover;
+    background-attachment: fixed; 
+    background-position: center; */
+    background-color: var(--color3);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -48,7 +57,7 @@ body {
     width: 100%;
     display: flex;
     height: 60px;
-    background: #0a0136;
+    background: var(--color2);
     position: absolute;
     justify-content: center;
 }
@@ -57,7 +66,8 @@ body {
     display: flex;
     gap: 5rem;
     align-items: center;
-    transition: opacity .5s ease-in-out;
+    /* transition: opacity .5s ease-in-out; */
+    transition: .5s;
 }
 
 .nav-menu-item,
@@ -78,13 +88,13 @@ body {
 }
 
 .icon-red {
-    color: #4117ff;
+    color: var(--color1);
 }
 
 .nav-menu li a::after {
     content: "";
     position: absolute;
-    background-color: #4117ff;
+    background-color: var(--color1);
     height: 3px;
     width: 0;
     left: 0;
@@ -119,7 +129,7 @@ body {
 }
 
 .home-nombre {
-    color: #4117ff;
+    color: var(--color1);
     font-weight: bold;
 }
 
@@ -137,20 +147,20 @@ body {
 
 .button-cv {
     padding: 20px;
-    border: 1px solid #4117ff;
+    border: 1px solid var(--color1);
     width: 200px;
     text-align: center;
     cursor: pointer;
     letter-spacing: 2px;
 
     color: #e9e9e9;
-    transition: 0.5s;
+    transition: 0.9s;
     font-weight: 900;
 }
 
 .button-cv:hover {
-    color: #000000;
-    background-color: #4117ff;
+    color: var(--color3);
+    background-color: var(--color4);
 }
 
 .inicio-redes {
@@ -252,17 +262,19 @@ body {
         padding: 20px;
         top: 60px;
         z-index: -10;
-        opacity: 0;
+        /* opacity: 0; */
         left: 0;
         width: 100%;
-        height: 100vh;
-        background-color: #0a0136;
-        pointer-events: none;
-    }
-
-    .nav-menu-visible {
-        opacity: 1;
+        height:  calc(100vh - 60px);
+        background-color: var(--color3);
         pointer-events: auto;
+    }
+    .nav-menu-oculto{
+        transform: translateY(-200%);
+    }
+    .nav-menu-visible {
+        display: flex;
+        transform: translateY(0);
     }
 
     .nav-menu li,
@@ -434,13 +446,13 @@ body {
     font-weight: 900;
     padding: 10px;
     transition: 0.5s ease;
-    border: 1px solid #4117ff;
+    border: 1px solid var(--color1);
 
 }
 
 .button-link:hover {
-    color: #000000;
-    background-color: #4117ff;
+    color: var(--color3);
+    background-color: var(--color4);
 }
 
 .proyecto-footer {
@@ -465,7 +477,7 @@ body {
     justify-content: center;
     height: auto;
     width: 100%;
-    border: 5px solid #1d009e;
+    border: 5px solid var(--color1);
     position: relative;
     overflow: hidden;
 }
@@ -501,7 +513,7 @@ body {
     width: 100%;
     margin: 0;
     text-align: center;
-    background-color: #1d009e;
+    background-color: var(--color2);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -643,8 +655,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0.86rem 1rem;
-    color: #fff;
-    background: #1d009e;
+    color: var(--color4);
+    background: var(--color2);
     letter-spacing: 2px;
     font-weight: 700;
     transition: all .5s;
@@ -652,7 +664,7 @@ body {
 
 .redes-contenedor:hover {
     transform: scale(1.1);
-    box-shadow: 0 10px 20px rgb(65, 23, 255);
+    box-shadow: 0 10px 20px var(--color3);
 
 }
 
@@ -664,9 +676,9 @@ body {
 .form-contenido input,
 .form-contenido textarea {
     padding: 0.86rem 1rem;
-    color: #ffff;
+    color: var(--color4);
     background: none;
-    border: 1px solid rgb(65, 23, 255);
+    border: 1px solid var(--color1);
     display: flex;
     font-family: 'urbanist';
 
@@ -688,8 +700,8 @@ body {
     width: 100%;
     cursor: pointer;
     background: none;
-    color: rgb(255, 255, 255);
-    border: 1px solid rgb(65, 23, 255);
+    color: var(--color4);
+    border: 1px solid var(--color1);
     padding: 0.86rem 1rem;
     font-family: 'urbanist';
 
@@ -741,9 +753,7 @@ body {
     }
 }
 
-@media (max-width: 887px) {
-    
-}
+
 
 @media (max-width: 450px) {
     .form-title {

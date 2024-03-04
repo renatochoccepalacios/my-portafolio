@@ -6,11 +6,14 @@ const hamburguer = document.querySelector(".fas.fa-bars");
 toggle.addEventListener("click", () => {
     hamburguer.classList.toggle("fa-solid");
     hamburguer.classList.toggle("fa-x");
-    navMenu.classList.toggle("nav-menu-visible"); // cambiamos la clase de nav-menu  a nav-menu-visible
 
-    if (navMenu.classList.contains("nav-menu-visible")) {
-        toggle.setAttribute("aria-label", "Cerrar menú");
+    if (navMenu.classList.contains('nav-menu-visible')) {
+        // Si la tiene, reemplazarla por "nav-menu-oculto"
+        navMenu.classList.remove('nav-menu-visible');
+        navMenu.classList.add('nav-menu-oculto');
     } else {
-        toggle.setAttribute("aria-label", "Abrir menú");
+        // Si no la tiene, reemplazarla por "nav-menu-visible"
+        navMenu.classList.remove('nav-menu-oculto');
+        navMenu.classList.add('nav-menu-visible');
     }
 })  
