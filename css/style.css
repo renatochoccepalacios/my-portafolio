@@ -7,12 +7,14 @@
     list-style: none;
     text-decoration: none;
 }
+
 :root {
-    --color1: #373739;
-    --color2: #19191a;
-    --color3: #020202;
+    --color1: #4b4b4b;
+    --color2: #262626;
+    --color3: #000000   ;
     --color4: #f4f4f4;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -49,7 +51,6 @@ body {
     height: 60px;
     position: sticky;
     top: 0;
-    background: #0a0136;
     z-index: 3;
 }
 
@@ -121,7 +122,7 @@ body {
 
 .inicio-rows {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 2rem;
     align-items: center;
     width: 100%;
@@ -182,8 +183,8 @@ body {
 
 .inicio-row-right {
     display: flex;
-    width: 500px;
-    height: 450px;
+    width: 350px;
+    height: 330px;
     /* width: 50px;
     height: 50px; */
     border-radius: 50%;
@@ -257,24 +258,27 @@ body {
     .nav-menu {
         position: absolute;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
+        justify-content: center;
         gap: 40px;
         padding: 20px;
-        top: 60px;
-        z-index: -10;
+        top: 0;
+        /* z-index: -10; */
         /* opacity: 0; */
         left: 0;
         width: 100%;
-        height:  calc(100vh - 60px);
-        background-color: var(--color3);
+        height: 100vh;
+        background-color: rgb(0 0 0 / 84%);
         pointer-events: auto;
     }
-    .nav-menu-oculto{
-        transform: translateY(-200%);
+
+    .nav-menu-oculto {
+        transform: translateX(-200%);
     }
+
     .nav-menu-visible {
         display: flex;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 
     .nav-menu li,
@@ -396,11 +400,15 @@ body {
     align-items: center;
     transition: .3s ease;
     cursor: pointer;
+    background-color: var(--color2);
+    padding: 1.25rem;
 }
+
 .card-item-skill svg {
     width: 100px;
     height: 100px;
 }
+
 .card-item-skill:hover {
     transform: scale(1.2);
 }
@@ -487,15 +495,15 @@ body {
 }
 
 
-/* .contenedor-img-proyecto::after {
+.contenedor-img-proyecto::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #2323234d;
-} */
+    background-color: #0000004d;
+}
 
 .img-proyecto {
     width: 100%;
@@ -534,12 +542,15 @@ body {
     .sobre-mi-img {
         text-align: center;
     }
+
     .sobre-mi-parrafo {
         font-size: 1.20rem;
     }
+
     .sobre-mi-img img {
         height: 160px;
     }
+
     .skills {
         height: auto;
         padding: 5rem 2rem 6rem 2rem;
@@ -591,6 +602,7 @@ body {
         gap: 70px;
         padding: 5rem 2rem 6rem 2rem;
     }
+
     .proyecto-item {
         height: auto;
     }
@@ -612,11 +624,13 @@ body {
     text-align: center;
     font-size: 40px;
 }
+
 .form-contacto {
     display: flex;
     width: 100%;
     gap: 100px;
 }
+
 .form-contenido {
     display: flex;
     flex-direction: column;
@@ -642,14 +656,19 @@ body {
     font-size: 30px;
     text-align: center;
 }
+
 .nombre-gmail-form {
     display: flex;
     gap: 17px;
 }
 
-.nombre-gmail-form  input /* input:nth-child(1), .nombre-gmail-form input:nth-child(2) */ {
+.nombre-gmail-form input
+
+/* input:nth-child(1), .nombre-gmail-form input:nth-child(2) */
+    {
     width: 50%;
 }
+
 .redes-contenedor {
     display: flex;
     justify-content: space-between;
@@ -668,7 +687,8 @@ body {
 
 }
 
-.redes-contenedor i, .redes-contenedor span {
+.redes-contenedor i,
+.redes-contenedor span {
     font-size: 20px;
 
 }
@@ -685,7 +705,8 @@ body {
     gap: 10px;
 }
 
-.form-contenido input::placeholder, .form-contenido textarea::placeholder{
+.form-contenido input::placeholder,
+.form-contenido textarea::placeholder {
     color: #9c9c9c;
 
 }
@@ -696,7 +717,7 @@ body {
 
 }
 
-.button-contenedor-enviar button{
+.button-contenedor-enviar button {
     width: 100%;
     cursor: pointer;
     background: none;
@@ -730,11 +751,11 @@ body {
         gap: 60px;
     }
 
-    .form-contenedor{
+    .form-contenedor {
         height: auto;
         padding: 5rem 2rem 6rem 2rem;
     }
-    
+
     .form-contenido {
         gap: 10px;
         padding: 2rem;
@@ -759,10 +780,12 @@ body {
     .form-title {
         font-size: 23px;
     }
+
     .nombre-gmail-form {
         flex-direction: column;
     }
-    .nombre-gmail-form > input {
+
+    .nombre-gmail-form>input {
         width: 100%;
 
     }
@@ -776,7 +799,7 @@ body {
     .form-redes {
         padding: 0;
     }
-    
+
     .proyecto-item {
         padding: 0;
     }
