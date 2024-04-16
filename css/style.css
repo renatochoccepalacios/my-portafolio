@@ -400,7 +400,6 @@ body {
     align-items: center;
     transition: .3s ease;
     cursor: pointer;
-    background-color: var(--color2);
     padding: 1.25rem;
 }
 
@@ -616,8 +615,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2rem;
-    height: 100vh;
+    padding: 5rem 2rem 0 2rem;
 }
 
 .contacto {
@@ -695,7 +693,7 @@ body {
 
 .form-contenido input,
 .form-contenido textarea {
-    padding: 0.86rem 1rem;
+    padding: 0.50rem 1rem;
     color: var(--color4);
     background: none;
     border: 1px solid var(--color1);
