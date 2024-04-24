@@ -7,10 +7,14 @@
     <title>My Portfolio</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/a8aa7b0eff.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
-    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body id="inicio">
@@ -175,11 +179,12 @@
                     </svg>
                     <h1>MySQL</h1>
                 </li>
-                
+
             </ul>
         </section>
-        <article class="contenedor-proyectos" id="proyectos">
 
+
+        <!--  <section class="contenedor-proyectos" id="proyectos">
             <section class="proyecto-item">
 
                 <div class="proyecto-contenido">
@@ -268,7 +273,102 @@
                     </div>
                 </div>
             </section>
-        </article>
+            <button>></button>
+            <button><</button>
+        </section> -->
+
+        <section class="contenedor-slider" id="proyectos">
+            <div class="carruseles" id="slider">
+                <section class="slider-section">
+                        <h1 class="proyecto-title">Proyecto</h1>
+                        <figure class="contenedor-img-proyecto">
+                            <img src="img/mppicado.png" alt="" class="img-proyecto">
+                        </figure>
+                        <div class="proyecto-nombre">
+                            <h1>Mp Disarq</h1>
+                        </div>
+                        <div class="proyecto-footer">
+                            <p>Estudio de arquitectura que ofrece servicios profesionales especializados en diseño
+                                arquitectónico.</p>
+                            <div class="button-contenedor-link">
+                                <a class="button-link" target="_blank" href="https://piadisarqoficial.netlify.app">Ver
+                                    Proyecto</a>
+
+                            </div>
+
+                        </div>
+                </section>
+                <section class="slider-section">
+                    <div class="proyecto-contenido">
+                        <h1 class="proyecto-title">Proyecto</h1>
+                        <figure class="contenedor-img-proyecto">
+                            <img src="img/ciie.png" alt="" class="img-proyecto">
+                        </figure>
+                        <div class="proyecto-nombre">
+                            <h1>CIIE Escobar</h1>
+                        </div>
+                        <div class="proyecto-footer">
+                            <p>Ofrece una experiencia interactiva y visualmente atractiva, permitiendo a los usuarios
+                                explorar y acceder fácilmente a varios cursos directamente desde un slider.</p>
+                            <div class="button-contenedor-link">
+                                <a class="button-link" target="_blank"
+                                    href="https://proyecto-ciie-escobar.netlify.app">Ver
+                                    Proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="slider-section">
+                    <div class="proyecto-contenido">
+                        <h1 class="proyecto-title">Proyecto</h1>
+                        <figure class="contenedor-img-proyecto">
+                            <img src="img/netflix.png" alt="" class="img-proyecto">
+                        </figure>
+                        <div class="proyecto-nombre">
+                            <h1>Clon De Netflix</h1>
+                        </div>
+                        <div class="proyecto-footer">
+                            <p>Recreé la interfaz de inicio de Netflix, mostrando los planes de la plataforma y los
+                                motivos
+                                para unirte</p>
+                            <div class="button-contenedor-link">
+                                <a class="button-link" target="_blank"
+                                    href="https://clon-netflix-renato-chocce.netlify.app">Ver Proyecto</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <section class="slider-section">
+                    <div class="proyecto-contenido">
+                        <h1 class="proyecto-title">Proyecto</h1>
+                        <figure class="contenedor-img-proyecto">
+                            <img src="img/carrito.png" alt="" class="img-proyecto">
+                        </figure>
+                        <div class="proyecto-nombre">
+                            <h1>Carrito de Compras</h1>
+                        </div>
+                        <div class="proyecto-footer">
+                            <p>Ofrece una amplia selección de zapatillas Nike y permite a los usuarios agregar productos
+                                de
+                                su interés a
+                                un carrito de compras.</p>
+                            <div class="button-contenedor-link">
+                                <a class="button-link" target="_blank"
+                                    href="https://carrito-de-compras-renato.netlify.app">Ver
+                                    Proyecto</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="btn-left"><i class="fa-solid fa-arrow-left"></i></div>
+            <div class="btn-right"><i class="fa-solid fa-arrow-right"></i></div>
+        </section>
 
         <section class="form-contenedor" id="form-contacto">
             <form class="form-contacto" action="https://formsubmit.co/1f2279c94deb8993e8541b10d1d9389b" method="POST">
@@ -338,7 +438,9 @@
     </footer>
     <!-- </section> -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="js/header.js"></script>
 </body>
 
