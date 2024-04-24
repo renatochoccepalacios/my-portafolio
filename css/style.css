@@ -7,12 +7,14 @@
     list-style: none;
     text-decoration: none;
 }
+
 :root {
-    --color1: #373739;
-    --color2: #19191a;
-    --color3: #020202;
+    --color1: #e8ddcb;
+    --color2: #033649;
+    --color3: #031634;
     --color4: #f4f4f4;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -120,8 +122,8 @@ body {
 }
 
 .inicio-rows {
-    display: flex;
-    justify-content: space-between;
+        display: flex;
+    justify-content: center;
     padding: 2rem;
     align-items: center;
     width: 100%;
@@ -182,8 +184,8 @@ body {
 
 .inicio-row-right {
     display: flex;
-    width: 500px;
-    height: 450px;
+    width: 340px;
+    height: 325px;
     /* width: 50px;
     height: 50px; */
     border-radius: 50%;
@@ -257,24 +259,27 @@ body {
     .nav-menu {
         position: absolute;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        justify-content: center;
         gap: 40px;
         padding: 20px;
-        top: 60px;
-        z-index: -10;
+        /* z-index: 10; */
         /* opacity: 0; */
         left: 0;
-        width: 100%;
-        height:  calc(100vh - 60px);
+        height: 100vh;
         background-color: var(--color3);
         pointer-events: auto;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .75);
     }
-    .nav-menu-oculto{
-        transform: translateY(-200%);
+
+    .nav-menu-oculto {
+        transform: translateX(-100%);
+        opacity: 0;
     }
+
     .nav-menu-visible {
         display: flex;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 
     .nav-menu li,
@@ -288,7 +293,7 @@ body {
 }
 
 
-/* .sobre-mi {
+.sobre-mi {
     display: flex;
     height: 100vh;
     align-items: center;
@@ -306,54 +311,57 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-.sobre-mi-parrafo {
-    font-size: 1.35rem;
-    width: 70%;
-}
 
 .sobre-mi-img {
     width: 50%;
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 70%;
 }
 
 .sobre-mi-img > img {
-    width: 50%;
     object-fit: contain;
 }
- */
+
 
 /* css grid */
-.sobre-mi {
-    display: grid;
+/* .sobre-mi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 2rem;
     height: 100vh;
-
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
-    grid-auto-rows: minmax(200px, auto);
-    /* place-items: center; */
-    align-items: center;
-    grid-auto-flow: dense;
-
 }
 
 
 .sobre-mi-img {
-    width: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-mi-img img {
+    width: 400px;
+
 }
 
 .sobre-mi-contenido {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 
 .sobre-mi-titulo {
-    font-size: 4rem;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .sobre-mi-parrafo {
-    font-size: 1.56rem;
-}
+    text-align: center;
+} */
 
 .skills {
     display: flex;
@@ -397,10 +405,12 @@ body {
     transition: .3s ease;
     cursor: pointer;
 }
+
 .card-item-skill svg {
     width: 100px;
     height: 100px;
 }
+
 .card-item-skill:hover {
     transform: scale(1.2);
 }
@@ -477,7 +487,6 @@ body {
     justify-content: center;
     height: auto;
     width: 100%;
-    border: 5px solid var(--color1);
     position: relative;
     overflow: hidden;
 }
@@ -527,19 +536,26 @@ body {
     .sobre-mi {
         height: auto;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         padding: 5rem 2rem 6rem 2rem;
     }
 
-    .sobre-mi-img {
+    .sobre-mi-img img {
+        width: 160px;
         text-align: center;
     }
-    .sobre-mi-parrafo {
+
+    .sobre-mi-contenido {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* .sobre-mi-parrafo {
         font-size: 1.20rem;
-    }
-    .sobre-mi-img img {
-        height: 160px;
-    }
+    } */
+
+    
+
     .skills {
         height: auto;
         padding: 5rem 2rem 6rem 2rem;
@@ -591,6 +607,7 @@ body {
         gap: 70px;
         padding: 5rem 2rem 6rem 2rem;
     }
+
     .proyecto-item {
         height: auto;
     }
@@ -604,7 +621,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2rem;
+    padding: 3rem 2rem 0 2rem;
     height: 100vh;
 }
 
@@ -612,11 +629,13 @@ body {
     text-align: center;
     font-size: 40px;
 }
+
 .form-contacto {
     display: flex;
     width: 100%;
     gap: 100px;
 }
+
 .form-contenido {
     display: flex;
     flex-direction: column;
@@ -642,14 +661,19 @@ body {
     font-size: 30px;
     text-align: center;
 }
+
 .nombre-gmail-form {
     display: flex;
     gap: 17px;
 }
 
-.nombre-gmail-form  input /* input:nth-child(1), .nombre-gmail-form input:nth-child(2) */ {
+.nombre-gmail-form input
+
+/* input:nth-child(1), .nombre-gmail-form input:nth-child(2) */
+    {
     width: 50%;
 }
+
 .redes-contenedor {
     display: flex;
     justify-content: space-between;
@@ -668,7 +692,8 @@ body {
 
 }
 
-.redes-contenedor i, .redes-contenedor span {
+.redes-contenedor i,
+.redes-contenedor span {
     font-size: 20px;
 
 }
@@ -685,7 +710,8 @@ body {
     gap: 10px;
 }
 
-.form-contenido input::placeholder, .form-contenido textarea::placeholder{
+.form-contenido input::placeholder,
+.form-contenido textarea::placeholder {
     color: #9c9c9c;
 
 }
@@ -696,7 +722,7 @@ body {
 
 }
 
-.button-contenedor-enviar button{
+.button-contenedor-enviar button {
     width: 100%;
     cursor: pointer;
     background: none;
@@ -730,11 +756,11 @@ body {
         gap: 60px;
     }
 
-    .form-contenedor{
+    .form-contenedor {
         height: auto;
         padding: 5rem 2rem 6rem 2rem;
     }
-    
+
     .form-contenido {
         gap: 10px;
         padding: 2rem;
@@ -759,10 +785,12 @@ body {
     .form-title {
         font-size: 23px;
     }
+
     .nombre-gmail-form {
         flex-direction: column;
     }
-    .nombre-gmail-form > input {
+
+    .nombre-gmail-form>input {
         width: 100%;
 
     }
@@ -776,7 +804,7 @@ body {
     .form-redes {
         padding: 0;
     }
-    
+
     .proyecto-item {
         padding: 0;
     }
