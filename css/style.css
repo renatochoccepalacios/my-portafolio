@@ -755,7 +755,7 @@ body {
 
 
 @media (max-width: 450px) {
- 
+
 
     .nombre-gmail-form {
         flex-direction: column;
@@ -782,4 +782,5 @@ body {
 
     .cards-skill {
         padding: 0;
-    }}
+    }
+}
