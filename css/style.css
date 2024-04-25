@@ -9,7 +9,7 @@
 }
 
 :root {
-    --color1: #e8ddcb;
+    --color1: #12c2c2;
     --color2: #033649;
     --color3: #031634;
     --color4: #f4f4f4;
@@ -122,7 +122,7 @@ body {
 }
 
 .inicio-rows {
-        display: flex;
+    display: flex;
     justify-content: center;
     padding: 2rem;
     align-items: center;
@@ -305,11 +305,14 @@ body {
 .sobre-mi-titulo {
     font-size: 3rem;
 }
+
 .sobre-mi-contenido {
     display: flex;
     width: 50%;
+    text-align: center;
     justify-content: center;
     flex-direction: column;
+    font-size: 1.10rem;
 }
 
 .sobre-mi-img {
@@ -319,9 +322,11 @@ body {
     height: 70%;
 }
 
-.sobre-mi-img > img {
+.sobre-mi-img>img {
     object-fit: contain;
 }
+
+.sobre-mi-parrafo {}
 
 
 /* css grid */
@@ -532,6 +537,8 @@ body {
     margin-top: 50px;
 }
 
+
+
 @media (max-width: 1027px) {
     .sobre-mi {
         height: auto;
@@ -549,12 +556,12 @@ body {
         width: 100%;
         text-align: center;
     }
-    
+
     /* .sobre-mi-parrafo {
         font-size: 1.20rem;
     } */
 
-    
+
 
     .skills {
         height: auto;
@@ -628,12 +635,14 @@ body {
 .contacto {
     text-align: center;
     font-size: 40px;
+    text-transform: uppercase;
 }
 
 .form-contacto {
     display: flex;
     width: 100%;
     gap: 100px;
+    justify-content: center;
 }
 
 .form-contenido {
@@ -649,18 +658,8 @@ body {
     flex-direction: column;
 }
 
-.form-redes {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    gap: 40px;
 
-}
 
-.form-title {
-    font-size: 30px;
-    text-align: center;
-}
 
 .nombre-gmail-form {
     display: flex;
@@ -674,29 +673,7 @@ body {
     width: 50%;
 }
 
-.redes-contenedor {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.86rem 1rem;
-    color: var(--color4);
-    background: var(--color2);
-    letter-spacing: 2px;
-    font-weight: 700;
-    transition: all .5s;
-}
 
-.redes-contenedor:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px var(--color3);
-
-}
-
-.redes-contenedor i,
-.redes-contenedor span {
-    font-size: 20px;
-
-}
 
 .form-contenido input,
 .form-contenido textarea {
@@ -766,25 +743,19 @@ body {
         padding: 2rem;
     }
 
-    .form-redes {
-        padding: 2rem;
-    }
+
 
     .form-contenido {
         width: 100%;
     }
 
-    .form-redes {
-        width: 100%;
-    }
+
 }
 
 
 
 @media (max-width: 450px) {
-    .form-title {
-        font-size: 23px;
-    }
+ 
 
     .nombre-gmail-form {
         flex-direction: column;
@@ -796,16 +767,20 @@ body {
     }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 400px) {
     .form-contenido {
         padding: 0;
     }
 
-    .form-redes {
-        padding: 0;
+    .contacto {
+        font-size: 30px;
     }
 
     .proyecto-item {
+        padding: 0;
+    }
+
+    .cards-skill {
         padding: 0;
     }
 }
