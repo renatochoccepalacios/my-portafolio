@@ -143,7 +143,7 @@ body {
 }
 
 .inicio-row-left h1 {
-    font-size: 3.4rem;
+    font-size: clamp(1rem, 8vw, 3.4rem);
     color: #e9e9e9;
 }
 
@@ -431,10 +431,10 @@ body {
 }
 
 .proyecto-contenido {
-    width: 70%;
     display: flex;
-    flex-direction: column;
-    /* padding: 2rem; */
+    background-color: var(--color2);
+    border-radius: 2.3rem;
+    padding: 2rem;
     gap: 0.8rem;
 }
 
@@ -456,7 +456,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 200px;
+    width: 100%;
     height: 50px;
     color: #e9e9e9;
     font-weight: 900;
@@ -473,10 +473,16 @@ body {
 
 .proyecto-footer {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     gap: 1rem;
 
 }
-
+.proyecto-footer h3 {
+    font-size: clamp(1rem, 8vw, 40px);
+    text-wrap: wrap;
+    text-transform: uppercase;
+}
 .proyecto-item {
     display: flex;
     justify-content: center;
@@ -490,16 +496,15 @@ body {
 
 .contenedor-img-proyecto {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: auto;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+    /* position: relative; */
+    gap: 1rem;
+
 }
 
-.contenedor-img-proyecto img:hover {
-    transform: scale(1.2);
-}
+
 
 
 /* .contenedor-img-proyecto::after {
@@ -513,7 +518,7 @@ body {
 } */
 
 .img-proyecto {
-    width: 100%;
+    width: 400px;
     cursor: pointer;
     height: 270px;
     object-fit: cover;
@@ -538,6 +543,15 @@ body {
     margin-top: 50px;
 }
 
+@media (max-width: 915px) {
+    .proyecto-contenido {
+        flex-direction: column;
+    }
+
+    .img-proyecto {
+        width: 100%;
+    }
+}
 
 
 @media (max-width: 1027px) {
@@ -596,9 +610,9 @@ body {
         height: auto;
     }
 
-    .inicio-row-left h1 {
+    /* .inicio-row-left h1 {
         font-size: 2rem;
-    }
+    } */
 
     .button-cv {
         width: 100%;
@@ -618,6 +632,7 @@ body {
 
     .proyecto-item {
         height: auto;
+        padding: 0;
     }
 }
 
@@ -635,7 +650,7 @@ body {
 
 .contacto {
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(1rem, 8vw, 40px);
     text-transform: uppercase;
 }
 
@@ -773,9 +788,9 @@ body {
         padding: 0;
     }
 
-    .contacto {
+    /* .contacto {
         font-size: 30px;
-    }
+    } */
 
     .proyecto-item {
         padding: 0;
