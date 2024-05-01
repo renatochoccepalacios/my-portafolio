@@ -478,11 +478,13 @@ body {
     gap: 1rem;
 
 }
+
 .proyecto-footer h3 {
     font-size: clamp(1rem, 8vw, 40px);
     text-wrap: wrap;
     text-transform: uppercase;
 }
+
 .proyecto-item {
     display: flex;
     justify-content: center;
@@ -501,6 +503,7 @@ body {
     height: auto;
     /* position: relative; */
     gap: 1rem;
+    width: 400px;
 
 }
 
@@ -518,9 +521,7 @@ body {
 } */
 
 .img-proyecto {
-    width: 400px;
     cursor: pointer;
-    height: 270px;
     object-fit: cover;
     object-position: top;
     transition: 0.5s;
@@ -545,12 +546,13 @@ body {
 
 @media (max-width: 915px) {
     .proyecto-contenido {
+        width: 100%;
         flex-direction: column;
     }
-
-    .img-proyecto {
+    .contenedor-img-proyecto {
         width: 100%;
     }
+    
 }
 
 
